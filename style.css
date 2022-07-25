@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.page{
+    background: rgba(61, 49, 136, 0.133);
+}
+.container{
+    background-color: rgb(26, 35, 114);
+    padding: 3em 2.57em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    min-width: 37.5em;
+    border-radius: 10px;
+    box-shadow: 0 1.2em 1.0em rgba(55, 57, 59, 0.466);
+    border-bottom: 2px solid black;
+
+}
+.searchWrapper{
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1.25em;
+}
+.searchWrapper button{
+    font-size: 1em;
+    background-color: azure;
+    color: black;
+    padding: 0.8em 0;
+    border-radius: 1.5em;
+}
+.searchWrapper input{
+    font-size: 1em;
+    padding: 0 17em;
+    border: none;
+    border-bottom: 1px solid rgb(29, 17, 196);
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 1.5em;
+    letter-spacing: 2px;
+}
+.searchWrapper input:focus{
+    padding: 0 0.5em;
+}
+.result{
+    margin-top: 1.25em;
+}
+.flagImg{
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 1.8em auto 1.2em auto;
+    height: 45%;
+    min-height: 7.5em;
+}
+.flagImg img{
+    width: 45%;
+    min-width: 7.5em;
+    height: 45%;
+    min-height: 7.5em;
+}
+h1{
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5em;
+    font-size: 28px;
+}
+h2{
+    color: rgb(red, 225, 0);
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 1.5em;
+
+
+}
+h4{
+    display: inline;
+    font-weight: 600;
+    color: rgb(255, 0, 21);
+}
+h3{
+    color: red;
+    font-weight: 800;
+    text-align: center;
+}
+.dataWrapper{
+    margin-bottom: 1em;
+    letter-spacing: 0.3px;
+    text-align: center;
+    
+}
+.displayMessage{
+    color: rgb(0, 219, 235);
+    margin: 0 100px;
+    line-height: 60px;
+    border-bottom: 2px solid rgb(0, 255, 0);
+}
+.displayMessageLoading{
+    color: rgb(0, 255, 13);
+    margin: 0 100px;
+    line-height: 60px;
+}
