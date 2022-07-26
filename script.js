@@ -5,7 +5,7 @@ let displayMessage = document.querySelector(".displayMessage");
 let displayMessageLoading = document.querySelector(".displayMessageLoading")
 
 searchBtn.addEventListener("click", () => {
-    let countryName = "india";
+    let countryName = countryInp.value;
     // let countryCapital = "Abuja";
     // let countryCurrency = "Naira - NGN";
     // let countryContinent = "Africa";
@@ -13,10 +13,12 @@ searchBtn.addEventListener("click", () => {
     // let countryPopulation = 1203039 + "T";
     // let countryLogo = "./ssayan-majhi-WecQmKWGy8Q-unsplash.jpg";
 
-    let finalUrl= `https://restcountries.com/v3.1/name/nigeria`;
+    // let finalUrl= `https://restcountries.com/v3.1/name/${countryName}`;
+    let finalUrl= `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
+    let flagsvg = `https://countryflagsapi.com/svg/${countryName}`;
 
     // result.innerHTML =`
-    //         <img src="${countryLogo}" alt="${countryName} logo" class="flagImg" />
+    //         <img src="${flagsvg}" alt="${countryName} logo" class="flagImg" />
     //         <h2>${countryName}</h2>
     //         <div class="wrapper">
     //             <div class="dataWrapper">
@@ -46,74 +48,81 @@ searchBtn.addEventListener("click", () => {
     //         </div>
     //      `
 
-         displayMessage.style.display = "none";
-    // result.innerHTML = apiKey;
+    displayMessage.style.display = "none";
     console.log(finalUrl);
 
+    // fetch(finalUrl)
+    // .then((res) => res.json())
+    // .then((data) => {
+    //         console.log(data)
+
+
+    //  });
     fetch(finalUrl)
-    .then((res) => res.json)
+    .then((res) => res.json())
     .then((data) => {
             console.log(data[0])
             console.log(data[0].flags.svg)
-            console.log(data[0].capita)
-
+            console.log(data[0].fifa)
+            console.log(data[0].capital)
+            console.log(data[0].continents)
+            console.log(data[0].population)
+            console.log(data[0].currencies)
+            console.log(data[0].timezones)
+            let CommonName = countryName.toUpperCase();
+        
+            // <img src="${data[0].flags.svg}" alt="${countryName}" class="flagImg" />
             result.innerHTML =`
-            <img src="${data.flags.svg}" alt="${countryName}" class="flagImg" />
-            <h2>${data.name.comon}</h2>
+            <img src="${data[0].flags.svg}" alt="${countryName}" class="flagImg" />
+            <h2>${CommonName}</h2>
             <div class="wrapper">
                 <div class="dataWrapper">
                     <h4>Capital:</h4>
-                    <span>${data.capital}</span>
+                    <span>${data[0].capital}</span>
                 </div>
             <div class="wrapper">
                 <div class="dataWrapper">
                     <h4>Continent:</h4>
-                    <span>${data.continents}</span>
+                    <span>${data[0].continents}</span>
                 </div>
             <div class="wrapper">
                 <div class="dataWrapper">
                     <h4>Population:</h4>
-                    <span>${data.population}</span>
+                    <span>${data[0].population}</span>
                 </div>
             <div class="wrapper">
                 <div class="dataWrapper">
                     <h4>Currency:</h4>
-                    <span>${data.currencies[Objesct.keys(data.currencies)].name} - ${Object.keys(data.currencies)}</span>
-                </div>
-            <div class="wrapper">
-                <div class="dataWrapper">
+                    <span>${data[0].currencies[Object.keys(data[0].currencies)].name} - ${Object.keys(data[0].currencies)[0]}</span>
+                    </div>
+                    <div class="wrapper">
+                    <div class="dataWrapper">
                     <h4>Comon Languesges:</h4>
-                    <span>${Object.values(data.languages).toString().split(",").join(",")}</span>
-                </div>
-            </div>
-         `;
-    }).catch(() => {
-        if(countryName.length == 0){
-            result.innerHTML = `
-                <h3>The input field can not be empty.</h3>
-            `
-        }else{
-            result.innerHTML = `
-            <h3>Invalid Country name.</h3>
-        `
-        }
-    })
+                    <span>${Object.values(data[0].languages).toString().split(",").join(",")}</span>
+                    </div>
+                    </div>
+                    `;
+                }).catch(() => {
+                    if (countryName.length == 0){
+                        result.innerHTML =  ` 
+                            <h3>The input field can not be empty.</h3>
+                        `
+                    }else{
+                        result.innerHTML =  ` 
+                            <h3>Invalid  input field.</h3>
+                        `
+                    }
+                })
+                
 });
-countryInp.addEventListener("input", () => {
-    let ctryInp = countryInp.value
+            countryInp.addEventListener("input", () => {
+                    let ctryInp = countryInp.value
     displayMessage.innerHTML =  `
         <h1 class="displayMessageLoading">
-            Searching for ${ctryInp}
+            Searching for <span class="search">${ctryInp} </span>
         </h1>
     `
 });
-// countryInp.addEventListener("mouseenter", () => {
-//     displayMessage.innerHTML =  `
-//     <h1 class="displayMessageLoading">
-//         i am inside
-//     </h1>
-// `  
-// });
 countryInp.addEventListener("mouseleave", () => {
     displayMessage.innerHTML =  `
     <h1 class="displayMessageLoading">

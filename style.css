@@ -7,7 +7,7 @@
     background: rgba(61, 49, 136, 0.133);
 }
 .container{
-    background-color: rgb(26, 35, 114);
+    background-color: rgba(0, 26, 255, 0.479);
     padding: 3em 2.57em;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -105,4 +105,8 @@ h3{
     color: rgb(0, 255, 13);
     margin: 0 100px;
     line-height: 60px;
+}
+.search{
+    font-weight: 900;
+    color: rgba(255, 0, 128, 0.507);
 }
