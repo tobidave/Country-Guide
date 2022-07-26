@@ -7,5 +7,6 @@ uses various data like country name, country logo, country population status, co
 
 
 ### Futher Documentation
-i would be scaling the view to all types in the later future
-adding map views for location documentation
+i would be scaling the view to all types in the later future.
+
+adding map views for location documentation.
