@@ -130,7 +130,7 @@ searchBtn.addEventListener("click", () => {
     displayMessage.innerHTML =  `
         <h1 class="displayMessageLoading">
             Searching for <span class="search">${ctryInp} </span>
-        </h>
+        </h1>
     `
 });
 countryInp.addEventListener("mouseleave", () => {
