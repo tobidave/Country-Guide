@@ -111,7 +111,7 @@ h1{
 }
 .displayMessageLoading{
     color: rgb(0, 255, 13) !important;
-    margin: 0 100px !important;
+/*     margin: 0 100px !important; */
     line-height: 60px !important;
 }
 .inPlace{
