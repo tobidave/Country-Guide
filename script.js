@@ -128,9 +128,9 @@ searchBtn.addEventListener("click", () => {
             countryInp.addEventListener("input", () => {
                     let ctryInp = countryInp.value
     displayMessage.innerHTML =  `
-        <h1 class="displayMessageLoading">
+        <h4 class="displayMessageLoading">
             Searching for <span class="search">${ctryInp} </span>
-        </h1>
+        </h4>
     `
 });
 countryInp.addEventListener("mouseleave", () => {
@@ -143,9 +143,9 @@ countryInp.addEventListener("mouseleave", () => {
 countryInp.addEventListener("mouseenter", () => {
     let ctryInp = countryInp.value
     displayMessage.innerHTML =  `
-        <h1 class="displayMessageLoading">
+        <h4 class="displayMessageLoading">
             Searching for ${ctryInp}
-        </h1>
+        </h4>
     `
 });
 
