@@ -3,6 +3,10 @@ let countryInp = document.getElementById("country-inp");
 let result = document.querySelector(".result");
 let displayMessage = document.querySelector(".displayMessage");
 let displayMessageLoading = document.querySelector(".displayMessageLoading")
+const date = document.getElementById('date')
+const currentYear = new Date().getFullYear()
+
+date.textContent = currentYear
 
 searchBtn.addEventListener("click", () => {
     let countryName = countryInp.value;
@@ -73,33 +77,39 @@ searchBtn.addEventListener("click", () => {
         
             // <img src="${data[0].flags.svg}" alt="${countryName}" class="flagImg" />
             result.innerHTML =`
-            <img src="${data[0].flags.svg}" alt="${countryName}" class="flagImg" />
-            <h2>${CommonName}</h2>
-            <div class="wrapper">
-                <div class="dataWrapper">
-                    <h4>Capital:</h4>
-                    <span>${data[0].capital}</span>
-                </div>
-            <div class="wrapper">
-                <div class="dataWrapper">
-                    <h4>Continent:</h4>
-                    <span>${data[0].continents}</span>
-                </div>
-            <div class="wrapper">
-                <div class="dataWrapper">
-                    <h4>Population:</h4>
-                    <span>${data[0].population}</span>
-                </div>
-            <div class="wrapper">
-                <div class="dataWrapper">
-                    <h4>Currency:</h4>
-                    <span>${data[0].currencies[Object.keys(data[0].currencies)].name} - ${Object.keys(data[0].currencies)[0]}</span>
-                    </div>
-                    <div class="wrapper">
-                    <div class="dataWrapper">
-                    <h4>Comon Languesges:</h4>
-                    <span>${Object.values(data[0].languages).toString().split(",").join(",")}</span>
-                    </div>
+                    <img src="${data[0].flags.svg}" alt="${countryName}" class="flagImg materialboxed responsive-img" />
+                    <h2>${CommonName}</h2>
+                    <div class="re-group">
+                        <div class="wrapper">
+                            <div class="dataWrapper">
+                                <h4>Capital:</h4>
+                                <span>${data[0].capital}</span>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="dataWrapper">
+                                <h4>Continent:</h4>
+                                <span>${data[0].continents}</span>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="dataWrapper">
+                                <h4>Population:</h4>
+                                <span>${data[0].population}</span>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="dataWrapper">
+                                <h4>Currency:</h4>
+                                <span>${data[0].currencies[Object.keys(data[0].currencies)].name} - ${Object.keys(data[0].currencies)[0]}</span>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="dataWrapper">
+                                <h4>Comon Languesges:</h4>
+                                <span>${Object.values(data[0].languages).toString().split(",").join(",")}</span>
+                            </div>
+                        </div>
                     </div>
                     `;
                 }).catch(() => {
@@ -139,9 +149,7 @@ countryInp.addEventListener("mouseenter", () => {
     `
 });
 
-
-// `
-
-//             `
-// https://restcountries.com/v3.1/name/{name}?fullText=true
-// https://restcountries.com/v3.1/name/aruba?fullText=true
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, options);
+  });

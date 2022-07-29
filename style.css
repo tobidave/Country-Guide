@@ -3,10 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-.page{
-    background: rgba(61, 49, 136, 0.133);
-}
-.container{
+
+/* .container{
     background-color: rgba(255, 0, 128, 0.507);
     padding: 3em 2.57em;
     position: absolute;
@@ -19,31 +17,31 @@
     box-shadow: 0 1.2em 1.0em rgba(55, 57, 59, 0.466);
     border-bottom: 2px solid black;
 
-}
+} */
 .searchWrapper{
     display: grid;
     grid-template-columns: 9fr 3fr;
     gap: 1.25em;
 }
 .searchWrapper button{
-    font-size: 1em;
-    background-color: azure;
-    color: black;
-    padding: 0.8em 0;
-    border-radius: 1.5em;
+    font-size: 1em !important;
+    background-color: azure !important;
+    color: black !important;
+    padding: 0.8em 0 !important;
+    border-radius: 1.5em !important;
 }
-.searchWrapper input{
-    font-size: 1em;
-    padding: 0 17em;
-    border: none;
-    border-bottom: 1px solid rgb(29, 17, 196);
-    outline: none;
-    color: rgb(0, 0, 0);
-    border-radius: 1.5em;
-    letter-spacing: 2px;
-}
+/* .searchWrapper input{
+    font-size: 1em !important;
+    padding: 0 17em !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(29, 17, 196) !important;
+    outline: none !important;
+    color: rgb(0, 0, 0) !important;
+    border-radius: 1.5em !important;
+    letter-spacing: 2px !important;
+} */
 .searchWrapper input:focus{
-    padding: 0 0.5em;
+    padding: 0 0.5em !important;
 }
 .result{
     margin-top: 1.25em;
@@ -61,9 +59,6 @@
     min-width: 7.5em;
     height: 45%;
     min-height: 7.5em;
-}
-h1{
-    font-weight: 800;
     color: black;
     text-align: center;
     text-transform: uppercase;
@@ -71,42 +66,86 @@ h1{
     margin-bottom: 1.5em;
     font-size: 28px;
 }
+.bRadius{
+    border-radius: 5px !important;
+    border: none;
+}
 h2{
-    color: rgb(red, 225, 0);
     font-size: 28px;
     text-align: center;
-    margin-bottom: 1.5em;
+    /* margin-bottom: 1.5em; */
+    /* font-size: 20px !important; */
+    color: rgba(47, 0, 255, 0.945) !important;
 
-
+    
+    
+    
 }
 h4{
     display: inline;
     font-weight: 600;
-    color: rgb(255, 0, 21);
+    color: #ff0000a4;
+    font-size: 20px !important;
 }
 h3{
-    color: red;
+    color: #ff0000;
     font-weight: 800;
     text-align: center;
+    font-size: 20px !important;
+}
+h1{
+    font-size: 42px !important;
+}
+.display{
+    margin-bottom: 1em !important;
+   
 }
 .dataWrapper{
     margin-bottom: 1em;
     letter-spacing: 0.3px;
-    text-align: center;
-    
+    text-align: center;  
 }
 .displayMessage{
-    color: rgb(0, 219, 235);
-    margin: 0 100px;
-    line-height: 60px;
-    border-bottom: 2px solid rgb(0, 255, 0);
+    color: rgb(0, 219, 235) !important;
+    line-height: 60px !important;
 }
 .displayMessageLoading{
-    color: rgb(0, 255, 13);
-    margin: 0 100px;
-    line-height: 60px;
+    color: rgb(0, 255, 13) !important;
+    margin: 0 100px !important;
+    line-height: 60px !important;
+}
+.inPlace{
+    margin-top: 10px !important;
 }
 .search{
-    font-weight: 900;
-    color: rgba(255, 0, 128, 0.507);
+    font-weight: 900 !important;
+    color: rgba(255, 0, 128, 0.945) !important;
+    text-transform: uppercase !important;
+}
+
+
+.page{
+    /* width: 90vw !important; */
+    /* max-width: 1120px !important; */
+    margin: 60px auto !important;
+    /* padding: 2rem !important; */
+    /* min-height: calc(100vh - (6rem + 4rem)); */
+}
+
+footer{
+    background-color: grey !important;
+    color: white !important; 
+}
+.page-footer{
+    height: 4rem !important ;
+    display: flex !important ;
+    justify-content: center !important ;
+    align-items: center !important ;
+}
+.page-footer p{
+    margin-bottom: 0 !important ;
+}
+.footer-logo,
+.footer-link{
+    color: blue !important ;
 }

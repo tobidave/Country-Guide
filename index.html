@@ -4,28 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Country Guide</title>
 </head>
 <body>
 
     <div class="page">
-        <div class="container">
-            <div class="searchWrapper">
-                <input type="text" id="country-inp" placeholder="Choose a Country">
-                <button id="search-btn">Search</button>
-            </div>
+        <div class="container bRadius">
+                <div class="row">
+                    <div class="col s8">
+                        <input type="text" id="country-inp" placeholder="Choose a Country">
+                    </div>
+                    <div class="col  s4 inPlace right-align">
+                        <button class="center-align waves-effect waves-light btn " id="search-btn"><i class="material-icons right">search</i>Search</button>
+                    </div>
+                </div>
 
-            <div class="result">
- 
+                <div class="display container center-align">
+                    <h1 class="displayMessage ">Choose a country you want to find </h1>
+                </div>
+
+            <div class="result container">
+       
             </div>
-        <div class="display">
-            <h1 class="displayMessage">Choose a country you want to find </h1>
-        </div>
         <!-- <img src="https://countryflagsapi.com/svg/ng" alt="Nigeria flag" class="flagImg img"/> -->
         </div>
     </div>
-    
+
+
+
+
+    <footer class="page-footer center grey">
+        <p class="center">&copy; <span id="date">2022</span> SimplyRecipes
+             by <a href="https://rainbow-halva-612048.netlify.app/" class="footer-link"> Ogunnowo Oluwatobi </a>
+        
+        </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="./script.js"></script>
+
+    
 </body>
 </html>
