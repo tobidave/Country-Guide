@@ -106,7 +106,7 @@ searchBtn.addEventListener("click", () => {
                         </div>
                         <div class="wrapper">
                             <div class="dataWrapper">
-                                <h4>Comon Languesges:</h4>
+                                <h4>Common Languesges:</h4>
                                 <span>${Object.values(data[0].languages).toString().split(",").join(",")}</span>
                             </div>
                         </div>
